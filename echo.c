@@ -3,11 +3,21 @@
 
 int main(int argc, char *argv[])
 {
+    if (argc <= 1)
+    {
+        return 1;
+    }
+    
     int i;
 
     for (i = 0; i < argc; i++){
-        printf("%s", argv[i]);
+        if (i == argc -1)
+        {
+             printf("%s\n", argv[i]);
+        } else
+        {
+            printf("%s", argv[i]);
+        }
     }
-    printf("¥n");
     exit(0);
 }
